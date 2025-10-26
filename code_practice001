@@ -5,11 +5,25 @@
 
 my_list = [9,1,2,4,3,7,8]
 
-print(my_list[::-1]) 
+print("original list is :", my_list)
+
+print("list in reverse order : ", my_list[::-1])
+
+
 
 # index begins from the end of the list and continues till it recahes the last element in reverse order : uses step of -1(moves backward through sequence)
 # sequence[start:stop]
 # sequence[start:stop:step]
 
-#reverse() can't be used in an array of integers ; only strings
+
+
+
+
+
+for i in range(len(my_list)):
+    for j in range(len(my_list)-1):            # use j and j+1 to avoid unneccessary swapping of elements
+        if my_list[j] > my_list[j+1]:
+            my_list[j] , my_list[j+1] = my_list[j+1] , my_list[j]
+
+print("sorted list is :", my_list)
   
