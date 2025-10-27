@@ -1,3 +1,65 @@
 
 # write a py code which will print a set of alphabets in alphabetical order 
 # also in reverse order 
+
+
+letters=["c","z","q","A","m","B"]
+
+def alphabetical_order(alphabets):
+    word = list(alphabets)
+
+    for i in range(len(word)):
+        for j in range(len(word) -1):
+            if word[j] > word[j+1]:
+                word[j], word[j+1]= word[j+1], word[j]
+    #print(word)
+    reversed_word = "".join(word)
+     
+    return reversed_word
+
+
+
+
+print(alphabetical_order("dog"))
+
+
+
+
+
+
+
+
+
+# write a py code which will take a sentence and print its words  in alphabetical order 
+# also in reverse order 
+#Input- the sly fox jumped over the lazy dog
+#Output - eht lsy fox  dejmpu ......
+
+sentence= "the sly fox jumped over the lazy dog"
+
+
+new_sentence = []
+
+for word in sentence.split():
+    new_sentence.append(alphabetical_order(word))
+
+print(" ".join(new_sentence))
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
